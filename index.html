@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 760px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 1440px)" href="style.css">
+    <link rel="icon" type="image/png" sizes="40x40" href="./logo2.png">
+    <title>19 Cart - E-commerce website for all your online shopping from Bags, shoes, drinks, book and many more.</title>
+</head>
+<body id="home">
+    <!---------------------------------NAVBAR-------------------------------------->
+    <nav class="navbar">
+        <div class="container">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="store">
+            <span class="store-name">19Cart</span><img class="logo-image" src="./logo2.png" alt=""/>
+        </div>
+          <div  id="navbarText">
+            <ul class="navbar-links">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product-display.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./About-us.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+          </div>
+          <div class="product-cart">
+            <a  href="#"><img class="cartButton"  onclick="toggleCart()" id="cartIcon" src="my-cart.svg" alt="cart-img"/>
+            <span id="count-el" class="counter">0</span></a> 
+            <div class="cart1">
+                <div id="empty-cart" >Empty cart, add something</div>
+             </div>
+             <div class="cart-overlay">
+              <div class="cart">
+                  <span class="close-icon">
+                      <img src="./close-icon.png" alt="close-img" />
+                  </span>
+                  <h2>My Cart</h2>
+                  <div class="cart-content">
+                      <!-- <div class="cart-item">
+                          <img src="tomi-fruit-juice.png" alt="drink-img" />
+                      </div>
+                      <div>
+                          <p>Leather Pink Bag</p>
+                          <small>price: $50.00</small>
+                          <br>
+                          <a href="">Delete</a>
+                      </div>
+                  </div>
+              </div>
+          </div> -->
+      
+          <div class="small-container cart-page">
+              <table>
+                  <tr>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="cart-info">
+                            <button class="add-btn">Add</button>
+                              <img src="pink-bag.png" alt="pink-bag-image" />
+                              <div>
+                                  <p>Leather Pink Bag</p>
+                                  <small>price: $50.00</small>
+                                  <br>
+                                  <div>
+                                  <input type="number" value="1">
+                                  <span class="product-price">$50.00</span>
+                                </div>
+                                  <button class="delete-btn">Delete</button>
+                              </div>
+                          </div>
+                          <td><input type="number" value="1"></td>
+                          <td>$50.00</td>
+                      </td>
+                     
+                  </tr>
+                  <br>
+                  <tr>
+                      <td>
+                          <div class="cart-info">
+                              <img src="purple-trainers.png" alt="pink-bag-image" />
+                              <div>
+                                  <p>Purple Trainers with black patches</p>
+                                  <small>price: $40.00</small>
+                                  <br>
+                                  <button class="delete-btn">Delete</button>
+                              </div>
+                          </div>
+                      </td>
+                      <td><input type="number" value="1"></td>
+                      <td>$40.00</td>
+                  </tr>
+                  <br>
+                  <tr>
+                      <td>
+                          <div class="cart-info">
+                              <img src="wine-bag.png" alt="pink-bag-image" />
+                              <div>
+                                  <p>Classy wine bag</p>
+                                  <small>price: $60.00</small>
+                                  <br>
+                                  <button class="delete-btn">Delete</button>
+                              </div>
+                          </div>
+                      </td>
+                      <td><input type="number" value="1"></td>
+                      <td>$60.00</td>
+                  </tr>
+              </table>
+      
+              <div class="total-price">
+                  <table>
+                      <tr>
+                          <td>Subtotal</td>
+                          <td>$150.00</td>
+                      </tr>
+                      <tr>
+                          <td>Shipping fee</td>
+                          <td>$10.00</td>
+                      </tr>
+                      <tr>
+                          <td>Total</td>
+                          <td>$160.00</td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+                
+                <button class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>  
+    <!---------------------------------end of cart--------------------------------------------------->
+            <a class="wish-list" href="#">Wish-list
+            <span id="wish-count" class="counter">0</span></a>
+            
+            <button onclick="myFunction()" class="dropbtn">Account</button>
+            <div id="myDropdown" class="dropdown-menu">
+                <a class="dropdown-item" href="./log-in-form.html">Log in</a>
+                <a class="dropdown-item" href="Register.html">Sign-up</a>
+                <a class="dropdown-item" href="#">Log-out</a>
+            </div>
+            </div>
+          </div>
+    
+    <form class="search-bar">
+        <input onkeyup="search()" class="example-form" aria-label="I'm shopping for" type="search" name="q" placeholder="I'm shopping for...."/>
+        <button class="search-button" type="submit">Search</button>
+      </form>
+      
+    </nav>
+    <!----------------------------------------------------End of Navbar---------------------------------------------------------->
+
+    
+    <!---------------------------------------------------------Header----------------------------------------------------------------->
+    <header id="showcase">
+        <h1 class="showcase">An Exciting Place To Stock Up Quality And Affordable Items, With Just <span class="strong" href="./product-display.html">ONE CLICK!!!</span></h1>
+    </header>
+
+
+
+    <!------------Main section--------------->
+    <main id="Featured-category">
+        <div id="products">
+            <h2 class="featured-header">Featured Categories</h2>
+            <div class="product-section">
+                <a class ="products1" href="./product-display.html"><img class ="products clothes" src="./clothes.png" alt="cloth-img">Clothes</a>
+                <a class ="products1"  href="./product-display.html"><img class ="products bags" src="./handbag.png" alt="bag-image">Bags</a>
+                <a class ="products1" href="./product-display.html"><img class ="products shoes" src="./high-heels.png" alt="shoe-image">Shoes</a>
+                <a class ="products1" href="/product-display.html"><img class ="products books" src="./books.png" alt="book-image">Books</a>    
+                <a class ="products1" href="/product-display.html"><img class ="products computers" src="./desktop-computer.png" alt="computer-image">Computers</a>
+                <a class ="products1" href="/product-display.html"><img class ="products drinks" src="./soft-drink.png" alt="fruit-juice">Drinks</a>
+            </div>
+        </div>
+        <div id="offer-section">
+            <img class="offers" src="./offer-img1.png" alt="banner-img">
+            <img class="offers" src="./offer-img2.png" alt="banner-img">
+            <img class="offers" src="./offer-img3.png" alt="banner-img">
+        </div>
+        <!------------------ENd------------------------------------------>
+           
+    <!-----------------------Product section---------------------------->
+        <div id="products-display">
+            <div class="product-display-image1">
+                <a class ="more-product" href="./product-display.html"><img class ="long-gown" src="./long-gown.jpg" alt="cloth-img"></a>
+                <div class="prices"><p class="product-price">$50</p>  <button id="add-to-cart-btn" onclick ="increment()">ADD TO CART</button></div>
+            </div>
+            <div class="product-display-image2">
+              <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./tomi-fruit-juice.png" alt="fruit-juice"/>
+                <h3>Tomi fruit juice</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./purple-trainers.png" alt="fruit-juice"/>
+                <h3>Purple Trainers</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./bag4.png" alt="fruit-juice"/>
+                <h3>Hand bag</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./computer-2.png" alt="fruit-juice"/>
+                <h3>Desktop Computer</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./wine-bag.png" alt="fruit-juice"/>
+                <h3> Blue Handbag</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            <a class ="more-product"  href="./product-display.html"><img class="main-products" src="./book-3.png" alt="fruit-juice"/>
+                <h3>Motivational Book</h3>
+                <p class="product-price">$3.00</p>
+            </a>
+            </div>
+          </div>
+          <div id="shop-now">
+            <h4 class="shop-now-text">
+                Get 50% discount on all order as a new user.
+                <a href="product-display.html" class="shop-now-btn">SHOP NOW</a>
+            </h4>
+            
+         <div class="shop-now1">
+             <img class="shop-now-image" src="./small-bags.png" alt="bags-images">
+                 
+         </div>
+        </div> 
+          <div class="product-display-image3">
+            <a class ="more-product" href="./product-display.html"><img class ="main-products" src="./white-sneakers.png" alt="shoe-image">
+                <h3>White Tainersk</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./bag3.png" alt="bag-img">
+                <h3>Fashion bag</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./computer-3.png" alt="computer-image">
+                <h3>Widescreen computer</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./bag4.png" alt="bag-img">
+                <h3>Classy bag</h3>
+                <p class="product-price">$3.00</p></a>
+            
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./computers.png" alt="computer-image">
+                <h3>Samsung Laptop</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./mix-orange-drink.png" alt="computer-image">
+                <h3>Orange Drink</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./cloth-5.png" alt="bag-img">
+                <h3>Baby Romper</h3>
+                <p class="product-price">$3.00</p></a>
+            <a class ="more-product" href="/product-display.html"><img class ="main-products" src="./blue-trainers.png" alt="computer-image">
+                <h3>Blue Trainers</h3>
+                <p class="product-price">$3.00</p></a>
+          </div>
+       <!-- social media images-->
+    <div class="media-2">
+        <img class="payment-method" src="./paypal.png" alt="paypal">
+        <img class="payment-method" src="./paystack.png" alt="paystack">
+        <img class="payment-method" src="./master.png" alt="mastercard">
+    </div>      
+    </main> 
+
+
+    <!--Footer-->
+    <footer id="footer">
+        <div id="my-footer">
+            <div id="logo-footer">
+                <span class="logo-name">19Cart</span>
+                <img class="logo-image" src="./logo2.png" alt="logo-image"/>  
+            </div>
+            <div class="footer-text">
+                <h5>Great value</h5>
+                <p>We offer competitive prices on over 100 million items.</p>
+            </div>
+            <div class="footer-text">
+                <h5>Nationwide shopping</h5>
+            <p>We ship to over 200 countries and regions, and our site comes in 12 languages.</p> 
+            </div>
+            <div class="footer-text">
+                <h5>Safe payment</h5>
+                <p>Pay with the world’s most popular and secure payment methods.</p>
+            </div>
+            <div class="footer-text">
+                <h5>Shop with confidence</h5>
+                <p>Our Buyer Protection policy covers your entire purchase journey, no scam zone.</p>
+            </div>
+    
+            <div class="footer-text">
+                <h5>Stay connected</h5>
+                <div class="media-1">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/4406/4406220.png" alt="facebook">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/355/355974.png" alt="twitter">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/355/355975.png" alt="instagram"><!-- social media images-->
+                </div>       
+            </div>
+        </div>
+            
+
+        <p class="copy">Copyright &copy; 2022, 19Cart. Designed by <a href="https://www.linkedin.com/in/adebukola-omowole">Adebukola Omowole</a> All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

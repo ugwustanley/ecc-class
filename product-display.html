@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 760px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 1440px)" href="style.css">
+    <link rel="icon" type="image/png" sizes="40x40" href="./logo2.png">
+    <title>19 Cart - E-commerce website for all your online shopping from Bags, shoes, drinks, book and many more.</title>
+    <!-- <script src="index.js"></script> -->
+</head>
+<body id="home">
+    <!---------------------------------NAVBAR-------------------------------------->
+    <nav class="navbar">
+        <div class="container">
+        <a href="#" class="toggle-button">  
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="store">
+            <span class="store-name">19Cart</span><img class="logo-image" src="./logo2.png" alt=""/>
+        </div>
+          <div  id="navbarText">
+            <ul class="navbar-links">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="product-link" onclick="display()" href="#" active>Products</a>
+                <div id="productDropdown" class="dropdown-menu1">
+                <a class="dropdown-item1 btn" href="#" data-filter="all">All</a>
+                <a class="dropdown-item1 btn" href="#" data-filter="cloth">Cloth</a>
+                <a class="dropdown-item1 btn" href="#" data-filter="shoe">Shoe</a>
+                <a class="dropdown-item1 btn" href="#" data-filter="book">Book</a>
+                <a class="dropdown-item1 btn" href="#" data-filter="drink">Drink</a>
+                <a class="dropdown-item1 btn" href="#" data-filter="bag">Bag</a>
+            </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./About-us.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+          </div>
+          <div class="product-cart">
+            <a class="" href="#"><img src="my-cart.svg" alt="cart-img"/>
+            <span id="count-el" class="counter">0</span></a> 
+    
+            <a class="wish-list" href="#">Wish-list
+            <span id="wish-count" class="counter">0</span></a>
+            
+            <button onclick="myFunction()" class="dropbtn">Account</button>
+            <div id="myDropdown" class="dropdown-menu">
+                <a class="dropdown-item" href="./log-in-form.html">Log in</a>
+                <hr>
+                <a class="dropdown-item" href="log-in form.html">Sign-up</a>
+                <hr>
+                <a class="dropdown-item" href="#">Log-out</a>
+            </div>
+            </div>  
+    </div>
+    <form class="search-bar">
+        <input onkeyup="search()" id="input" class="example-form" aria-label="I'm shopping for" type="search" name="q" placeholder="I'm shopping for...."/>
+        <button class="search-button" id="submit" type="submit">Search</button>
+      </form>
+    </nav>
+    <!-----------------------------------------------------------End of Navbar------------------------------------------------------------->
+
+    <header id="slider">
+        <div class="img-slider">
+            <a class="btn btn-left"><i class="fa fa-caret-left"></i></a>
+            <a class="btn btn-right"><i class="fa fa-caret-right"></i></a>
+          </div> 
+    </header>
+   <section class="products-listing">
+    <div class="products-center" id="product-list">
+    </div>
+        <!-- <div class="product">
+            <div class="img-container bag">
+            <img class ="product-image" src="./pink-bag.png" alt="bag-image">
+            <button class="product-btn" onclick="increment()" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+            </div>
+            <h3>Pink Bag </h3><span><img class="wish-image" onclick="increment()" src="icon-heart.svg" alt="heart-image"/>Add To wishlist</span>
+            <h4>$16.00</h4>
+        </div>
+    <div class="product">
+        <div class="img-container shoe">
+        <img class ="product-image" src="./Black-trainers.png" alt="bag-image">
+        <button class="product-btn" onclick="increment()" data-id="1">
+        <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Black trainers shoe </h3><span><img class="wish-image" onclick="increment()" src="icon-heart.svg" alt="heart-image"/>Add To wishlist</span>
+        <h4>$16.00</h4>
+    </div>
+    <div class="product">
+        <div class="img-container bag">
+        <img class ="product-image" src="./cloth-4.png" alt="bag-image">
+        <button class="product-btn" onclick="increment()" data-id="1">
+        <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+    </div>
+        <h3>Stylish Top </h3><span><img class="wish-image" onclick="increment()" src="icon-heart.svg" alt="heart-image"/>Add To wishlist</span>
+        <h4>$16.00</h4>
+    </div>
+        <div class="product">
+            <div class="img-container shoe">
+            <img class ="product-image" src="./blue-trainers.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+            </div>
+            <h3>Blue trainers shoe</h3>
+            <h4>$16.00</h4>
+            </div>
+        <div class="product
+        ">
+            <div class="img-container bag">
+            <img class ="product-image" src="./bag4.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Hobbo Bag</h3>
+        <h4>$16.00</h4>
+        </div>
+        <div class="product">
+            <div class="img-container shoe">
+            <img class ="product-image" src="./purple-trainers.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Designer Purple trainers</h3>
+        <h4>$20.00</h4>
+        </div>
+        <div class="product">
+            <div class="img-container drink">
+            <img class ="product-image" src="./Schweppes.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Schweppes Bottle drink</h3>
+        <h4>$16.00</h4>
+        </div>
+        <div class="product">
+            <div class="img-container bag">
+            <img class ="product-image" src="./wine-bag.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Wine Designer Bag</h3>
+        <h4>$15.00</h4>
+        </div>
+        <div class="product">
+            <div class="img-container cloth">
+            <img class ="product-image" src="./baby-cloth.png" alt="bag-image">
+            <button class="product-btn" data-id="1">
+            <img src="cart-new.svg" alt="cart-img"/>Add to Cart</button>
+        </div>
+        <h3>Baby Pink body suit and Gown </h3>
+        <h4>$16.00</h4>
+        </div> -->
+    </section>
+<!-------------------------------------Cart------------------------------------->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">
+              <img src="/close-icon.png" alt="close-img"/>
+            </span>
+            <h2>Your Cart</h2>
+            <div class="cart-content">
+                <div class="cart-item">
+                    <img src="tomi-fruit-juice.png" alt="drink-img"/>
+                </div>
+                <div>
+                    <p>Leather Pink Bag</p>
+                    <small>price: $50.00</small>
+                    <br>
+                    <a href="">Delete</a>
+                    <a href="">Add</a>
+                    <a href="">save for later</a>
+                    <a href=""><img src=".icon-heart.svg" >Add to wishlist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------------------------------------------->
+
+    <!-- <div id="products-container">
+
+        <div>
+             <a href="product-landing-page.html"><img  class="main-products" src="./baby-cloth.png" alt="baby-cloth"></a>
+             <h3>Body suit and Gown</h3>
+            <span>$15.00</span>
+        </div>
+        <div>
+            <a id ="#bags"  href="./product-landing-page.html"><img class ="main-products" src="./pink-bag.png" alt="bag-image"></a>
+            <h3>Stylish Pink Bag</h3>
+            <span>$15.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div>
+            <a id ="#shoes" href="#" data-filter="all"><img class ="main-products" src="./purple-trainers.png" alt="shoe-image"></a>
+            <h3>Purple Trainers</h3>
+            <span>$6.60</span>
+        </div>
+        <div>
+            <a  href="/product-display.html"><img class ="main-products" src="./book-1.png" alt="book-img"></a>
+            <p>Beautiful Story book</p>
+            <span>$4.20</span>
+        </div>
+        <div>
+            <a  href="/product-display.html"><img class ="main-products" src="./computer-2.png" alt="computer-image"></a>
+             <p>Widescreen Computer</p>  
+             <span>$20.00</span> 
+        </div>
+        <div>
+            <a  href="product-landing-page.html"><img class ="main-products" src="./Schweppes.png" alt="drinks-image"></a>
+             <p>Schewwpes</p>  
+             <span>$10.00</span> 
+        </div>
+        </div>
+    
+    
+        <p class="new-arrival-head">NEW ARRIVALS</p>
+    <div class="new-arrivals"> 
+        <div>
+            <a class ="#drinks" href="#"><img class ="main-products1" src="./Schweppes.png" alt="fruit-juice">$3.00</a>
+            <a class ="#shoe" href="/product-display.html"><img class ="main-products1" src="./Black-trainers.png" alt="shoe-image">$5.50</a>
+            <a class ="#shoe"  href="#" data-filter="all"><img class ="main-products1" src="./wine-bag.png" alt="bag-image">$15.00</a>
+            <a class ="more-produc" href="#" data-filter="all"><img class ="main-products1" src="./tomi-fruit-juice.png" alt="shoe-image">$6.60</a>
+        </div>
+        
+        <div>
+
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./blue-trainers.png" alt="shoe-img">$4.20</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./bag3.png" alt="computer-image">$20.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./book-4.png" alt="fruit-juice">$3.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./cloth.png" alt="shoe-image">$5.50</a>
+        </div>
+        <div>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./computer-2.png" alt="computer-image">$20.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./cloth-4.png" alt="fruit-juice">$3.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./brown-shoe.png" alt="shoe-image">$5.50</a>
+        </div>
+
+         <div>
+            <a class ="more-produc" href="#" data-filter="all"><img class ="main-products1" src="./bag4.png" alt="shoe-image">$6.60</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./book-1.png" alt="book-img">$4.20</a>
+            <a class ="more-produc" href="#" data-filter="all"><img class ="main-products1" src="./mix-orange-drink.png" alt="shoe-image">$6.60</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./white-sneakers.png" alt="bag-img">$4.20</a>
+        </div>
+        <div>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./cloth-5.png" alt="computer-image">$20.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./book-3.png" alt="fruit-juice">$3.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./heel-shoe.png" alt="shoe-image">$5.50</a>
+            <a class ="more-produc" href="#" data-filter="all"><img class ="main-products1" src="./" alt="shoe-image">$6.60</a>
+        </div>
+        <div>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./long-gown.jpg" alt="bag-img">$4.20</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./cute-bag.png" alt="computer-image">$20.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./book-2.png" alt="fruit-juice">$3.00</a>
+            <a class ="more-produc" href="/product-display.html"><img class ="main-products1" src="./bag2.png" alt="shoe-image">$5.50</a>
+        </div>
+   </div> -->
+    <!--Footer-->
+    <footer id="footer">
+        <div id="my-footer">
+            <div id="logo-footer">
+                <h1 class="logo-name">19Cart</h1>
+                <img class="logo-image" src="./logo2.png"alt="logo-image"/> 
+            </div>
+            <div class="footer-text">
+                <h5>Great value</h5>
+                <p>We offer competitive prices on over 100 million items.</p>
+            </div>
+            <div class="footer-text">
+                <h5>Nationwide shopping</h5>
+            <p>We ship to over 200 countries and regions, and our site comes in 12 languages.</p> 
+            </div>
+            <div class="footer-text">
+                <h5>Safe payment</h5>
+                <p>Pay with the world’s most popular and secure payment methods.</p>
+            </div>
+            <div class="footer-text">
+                <h5>Shop with confidence</h5>
+                <p>Our Buyer Protection policy covers your entire purchase journey, no scam zone.</p>
+            </div>
+    
+            <div class="footer-text">
+                <h5>Stay connected</h5>
+                <div class="media-1">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/4406/4406220.png" alt="facebook">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/355/355974.png" alt="twitter">
+                    <img class="media" src="https://image.flaticon.com/icons/png/512/355/355975.png" alt="instagram"><!-- social media images-->
+                </div>       
+            </div>
+        </div>
+            
+
+        <p class="copy">Copyright &copy; 2022, 19Cart. Designed by <a href="https://www.linkedin.com/in/adebukola-omowole">Adebukola Omowole</a> All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+</body>
+    </html>
+</body>    
+</html>
